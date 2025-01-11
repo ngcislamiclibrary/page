@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #007537;
+    --background-color: #FDFFD0;
+  }
+body{
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: var(--secondary-color);
+}
+
+hr{
+    margin: 40px 10px 0px 10px; 
+    height: 3px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+}
+/* header */
+
+/* General styles for the navigation bar */
+.navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    z-index: 2;
+}
+.navbar button{
+    color: var(--background-color);
+}
+/* Hide navbar links initially for toggle behavior */
+#navbarLinks {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    height: 100%;
+    background-color: var(--background-color);
+    overflow-y: auto;
+    transition: left 0.3s ease-in-out;
+    padding: 20px;
+    border-radius: 0px 20px 20px 0px;
+}
+.navbar ul li{
+    list-style: none;
+    background-color: var(--secondary-color);
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 15px;
+}
+#navbarLinks li a{
+    text-decoration: none;
+    color: var(--background-color);
+    font-family: 'Mukti', sans-serif;
+}
+/* Show the navbar when active */
+.navbar.active #navbarLinks {
+    left: 0;
+}
+
+/* Style the toggle button */
+.toggle-btn {
+    font-size: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.toggle-btn:focus {
+    outline: none;
+}
+
+/* main */
+.home-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    border-radius: 100%;
+}
+.home-img img{
+    height: 200px;
+    padding: 8px;
+
+}
+.home-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-txt{
+    text-align: center;
+    color: var(--background-color);
+}
+
+.about-section{
+    display: flex;
+    justify-content: center;
+    margin: -22px 0px 0px 0px;
+    font-family: 'Mukti', sans-serif;
+}
+.about-section p{
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    padding: 8px;
+    border-radius: 100%;
+}
+.about-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.logo1{
+    height: 100px;
+    z-index: 1;
+}
+.logo2{
+    height: 127px;
+}
+.hndsk{
+    height: 123px;
+    margin: 0px -47px 0px -23px;
+    padding: 0;
+    color: var(--background-color);
+}
+.about-txt{
+    padding: 0px 10px;
+}
+.about-txt p{
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    margin: 5px 0px;
+    padding: 5px;
+    border-radius: 10px;
+    font-family: 'Bangla', sans-serif;
+    font-size: 25px;
+}
+.members{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px , 1fr));
+    margin: 10px;
+    
+}
+.mem-div{
+    background-color: var(--background-color);
+    position: relative;
+    padding: 50px 0px;
+    margin: 50px 10px 10px 50px;
+    text-align: center;
+    border-radius: 10px;
+}
+.mem-div .mem-logo{
+    position: absolute;
+    height: 100px;
+    left: -50px;
+    top: -50px;
+    background-color: var(--background-color);
+    padding: 5px;
+    border-radius: 100%;
+}
+.mem-div .mem-ranks{
+    position: absolute;
+    height: 50px;
+    bottom: 0px;
+    right: 7px;
+}
+.mem-div p{
+    font-family: 'Mukti', sans-serif;
+    font-weight: 600;
+    font-size: 23px;
+    color: var(--secondary-color);
+}
+.mem-div span{
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--secondary-color);
+}
+.books{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px , 1fr));
+}
+.books-div{
+    background-color: var(--background-color);
+    position: relative;
+    padding: 50px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px;
+}
+.b-symbol{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    height: 30px;
+    width: 30px;
+    background-color: var(--secondary-color);
+    border-radius: 100%;
+}
+.books-div img{
+    height: 280px;
+    border-radius: 10px;
+}
+.books-div p{
+    font-family: 'Mukti', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+.books-div a{
+    text-decoration: none;
+}
+.books-links{
+    margin-top: 50px;
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    padding: 5px;
+    border-radius: 5px;
+}
+.li-btn{
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.li-btn button{
+    padding: 15px;
+    border: none;
+    border-radius: 100%;
+    background-color: var(--background-color);
+}
+.li-btn button i{
+    font-size: 20px;
+    color: var(--secondary-color);
+}
+.li-btn button:hover{
+    cursor: pointer;
+}
+.li-btn-container{
+    text-align: center;
+    color: var(--background-color);
+    font-family: 'Mukti' , serif;
+    font-size: 20px;
+    margin: 10px;
+}
